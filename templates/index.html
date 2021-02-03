@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	<title>Booking</title>
+	{% load static  %}
+	<link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarText">
+	  <ul class="navbar-nav mr-auto">
+		{% if user.is_authenticated %}
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="/logout">Logout</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Welcome, {{user.username}}</a>
+		</li>
+  
+		{% else %}
+  
+		<li class="nav-item">
+		  <a class="nav-link" href="/login">Login</a>
+		</li>
+  
+		{% endif %}
+	  </ul>
+	</div>
+  </nav>
+	
+</head>
+<body>
+	
+	<form method="POST" action="">
+        {% csrf_token %}
+	<div class="container">
+		<div class="container-time" style="background-image: url('{% static "images/pic2.jpg" %}')" ;>
+			<h2 class="heading">Time Open</h2>
+			<h3 class="heading-days">Monday-friday</h3>
+			<p>7am-11am(breakfast)</p>
+			<p>11am-10pm(lunch-dinner)</p>
+
+			<h3 class="heading-days">Saturday-Sunday</h3>
+			<p>9am-1am(breakfast)</p>
+			<p>1am-10pm(lunch-dinner)</p>
+			<hr>
+			<h4 class="heading-phone">Call Us:(123) 45-45-456</h4>
+		</div>
+		<div class="container-form">
+			<form action="#"></form>
+			<div class="form-field">
+				<p> Your Name :</p>
+				{{form.cust_name}}
+			</div>
+			<div class="form-field">
+				<p> Your Email :</p>
+				{{form.email}}
+			</div>
+
+			<div class="form-field">
+				<p> Contact : </p>
+				{{form.phone_no}}
+			</div>
+
+			<div class="form-field">
+				<p> Date : </p>
+				{{form.date}}
+
+		</div>
+		<div class="form-field">
+				<p> Time:</p>
+				{{form.time}}
+
+		</div>
+			
+		
+				<p> Service </p>
+				{{form.service}}
+
+				
+			
+		<br>
+		{% for message in messages %}
+				<p id="messages">{{message}}</p>
+
+        {% endfor %}
+
+        {{form.error}}
+
+	<button class="btn" >Submit</button>
+
+	</div>
+	</div>
+	</form>
+
+</body>
+</html>

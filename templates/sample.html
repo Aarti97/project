@@ -1,0 +1,214 @@
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> website</title>
+    <link rel="stylesheet" href="{% static 'css/sample.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+<body>
+    <header>
+       
+        <ul class="nav">
+            <li><a href="#view">Home</a></li>
+            <li><a href="#about">Aboutus</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">contactus</a></li>
+            <li><a href="#banner">View</a></li>
+            <li><a href="/register">Registration</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/index">Appointment</a></li>
+
+            
+
+        </ul>
+    </header>
+    <section class="view" id="view" style="background-image: url('{% static "images/pic.jpg" %}')" ;> 
+        <div class="content">
+            <h2> Good hair reflects your story and your sprite</h2>
+            <a href="/index" class="btn">Book</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2  class="titleText"><span>A</span>bout Us</h2>
+                <p>Our stylists are highly trained in precision cutting and colouring to create the most beautiful on-trend and classic hair cuts, styles and colours. If you are looking for a complete hair makeover or new colour such as some sun-kissed highlights, bespoke balayage, or a fashion colour, make such you take advantage of our complimentary consultation.
+                The Skin Care Shop is an item darlings dream. We are intense about our healthy skin and genuinely committed to offering the most progressive healthy skin items in the business today. Our customers are essential to us and we are here to help with all healthy skin needs. We have faith in results!We additionally have really awesome items for body and shower. What’s more, cleansers, such a large number of cleansers. Wellbeing for the body. A masque bar! Jane Iredale cosmetics, Blinc, spectacular towels thus considerably more!
+                 </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic18.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service" id="service">
+        
+        <div class="title">
+            <h3 class="titleText"> <span>S</span>ERVICES WE OFFER </h3>
+            <p>This are our main services that we offer. Also be sure to check our other services.</p>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic2.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Facial</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic1.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Hair Style</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic20.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Bride MakeUp</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic10.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Waxing</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic11.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>laser Hair Removal</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic13.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>pedicure</h3>
+                </div>
+             </div>
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic12.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Threading</h3>
+                </div>
+             </div>
+             
+             <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'images/pic16.jpg' %}">
+                </div>
+                <div class="text">
+                    <h3>Spa</h3>
+                </div>
+             </div>
+        </div>
+        <div class="title">
+        <a href="#" class="btn">View All</a>
+        </div>
+    </div>    
+</section>
+<section class="banner" id="banner" > 
+
+     <div class="slidershow middle">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2" >
+            <input type="radio" name="r" id="r3" >
+            <input type="radio" name="r" id="r4" >
+            <input type="radio" name="r" id="r5" >
+            
+            
+        
+        <div class="slide s1">
+            <img src="{% static 'images/pic22.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/pic23.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/pic28.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/pic29.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/pic30.jpg' %}" alt="">
+        </div>
+        
+        
+        </div>
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+        
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="contact" id="contact" style ="background-image: url('{% static "images/pic4.jpg" %}')" ;>
+   <div class="title">
+       <h2 class="titleText"><span>C</span>ontact Us</h2>
+       <div class="contactForm">
+        <form method="POST" action="">
+        {% csrf_token %}
+        <h3>Send Message</h3>
+        <div class="inputBox">
+            {{form.name}}
+        </div>
+        <div class="inputBox">
+            {{form.email}}
+        </div>
+        <div class="inputBox">
+           {{form.message}}
+        </div>
+        {% for message in messages %}
+				<p id="messages">{{message}}</p>
+
+        {% endfor %}
+
+        {{form.error}}
+        <div class="inputBox">
+            <input type="submit" value ="Send">
+            </div>
+            </form>
+
+   </div>
+</section>
+
+
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY < 0);
+        });
+    </script>
+
+</body>
+</html>
+{% endblock %}
